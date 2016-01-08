@@ -1,4 +1,4 @@
-package tests;
+package tests.type;
 
 /**
  * This tests dynamic dispatch resolution on an anonymous inner class.

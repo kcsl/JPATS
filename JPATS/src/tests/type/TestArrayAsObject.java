@@ -1,4 +1,4 @@
-package tests;
+package tests.type;
 /**
  * This tests type propagation through an array treated as an Object 
  * 
@@ -14,11 +14,6 @@ public class TestArrayAsObject {
 
 	static class Object1 {
 		public Object1(){}
-		
-		@Override
-		public String toString(){
-			return "TestArrayAsObject$Object1$toString";
-		}
 	}
 	
 	public static void main(String[] args) {
@@ -27,7 +22,7 @@ public class TestArrayAsObject {
 		Object a2 = a1;
 		Object a3 = ((Object[][]) a2)[0];
 		Object o = ((Object[]) a3)[0];
-		System.out.println(o.toString());
+		System.out.println(o.getClass());
 	}
 
 }

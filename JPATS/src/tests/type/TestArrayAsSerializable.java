@@ -1,4 +1,4 @@
-package tests;
+package tests.type;
 import java.io.Serializable;
 
 /**
@@ -10,11 +10,6 @@ public class TestArrayAsSerializable {
 
 	static class Object1 {
 		public Object1(){}
-		
-		@Override
-		public String toString(){
-			return "TestArrayAsSerializable$Object1$toString";
-		}
 	}
 	
 	public static void main(String[] args) {
@@ -22,7 +17,7 @@ public class TestArrayAsSerializable {
 		a1[0] = new Object1();
 		Serializable a2 = a1;
 		Object o = ((Object[]) a2)[0];
-		System.out.println(o.toString());
+		System.out.println(o.getClass());
 	}
 
 }

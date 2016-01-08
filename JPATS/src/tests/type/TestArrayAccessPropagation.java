@@ -1,15 +1,11 @@
-package tests;
+package tests.type;
 
-import annotations.questions.PrintedType;
-import annotations.sensitivities.ArrayComponentSensitivity;
 
 /**
  * This tests the propagation of a simple local array access to a single array
  * component to another array component
  */
-@ArrayComponentSensitivity(rationale = "An instance of Object1 is placed in an array \"a\" with a single array component and then copied to another array component before being accessed.")
-@PrintedType
-public class TestArrayAccessPropagation implements Test {
+public class TestArrayAccessPropagation {
 
 	static class Object1 {
 		public Object1() {}
