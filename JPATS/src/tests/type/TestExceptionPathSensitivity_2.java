@@ -1,8 +1,5 @@
-package tests;
+package tests.type;
 
-import annotations.questions.PrintedType;
-import annotations.sensitivities.PathSensitivity;
-import annotations.sensitivities.paths.ExceptionSensitivity;
 
 /**
  * This tests if the analysis is path sensitive
@@ -12,10 +9,7 @@ import annotations.sensitivities.paths.ExceptionSensitivity;
  * both Object1 and Object2 are possible, when really only Object2 is possible
  * at runtime.
  */
-@PathSensitivity(k=1, rationale="Object \"o\" is conditionally overwritten with an instance of type Object2.  In this program the catch block is never executed.")
-@ExceptionSensitivity(rationale="The path depends on whether or not an exception is caught in the catch block.")
-@PrintedType
-public class TestExceptionPathSensitivity_2 implements Test {
+public class TestExceptionPathSensitivity_2 {
 
 	static class Object1 {}
 

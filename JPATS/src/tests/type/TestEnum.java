@@ -1,4 +1,4 @@
-package tests;
+package tests.type;
 /**
  * This tests an analyzers ability to deal with Enums as types
  * 
@@ -12,15 +12,10 @@ public class TestEnum {
 
 	public enum Day {
 		SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY;
-
-		@Override
-		public String toString() {
-			return "TestEnum$Day$toString";
-		}
 	}
 
 	public static void main(String[] args) {
 		Object o = Day.SUNDAY;
-		System.out.println(o.toString());
+		System.out.println(o.getClass());
 	}
 }

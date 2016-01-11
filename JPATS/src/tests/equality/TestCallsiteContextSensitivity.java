@@ -1,11 +1,10 @@
 package tests.equality;
 
 /**
- * TODO: Implement!
  * TODO: Description
  * Reference: Lhotak 2008 Figure 3
  */
-public class TestParameterContextSensitivity {
+public class TestCallsiteContextSensitivity {
 
 	static class Object1 {}
 
@@ -19,5 +18,5 @@ public class TestParameterContextSensitivity {
 		
 		System.out.println(a == b);
 	}
-	
+
 }

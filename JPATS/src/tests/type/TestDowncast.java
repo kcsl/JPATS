@@ -1,4 +1,4 @@
-package tests;
+package tests.type;
 /**
  * This tests if an analysis handles explicit downcasting
  * 
@@ -10,14 +10,7 @@ package tests;
  */
 public class TestDowncast {
 
-	static class Object1 {
-		public Object1() {}
-
-		@Override
-		public String toString() {
-			return "TestDowncast$Object1$toString";
-		}
-	}
+	static class Object1 {}
 
 	public static Object getObject() {
 		return new Object1();
@@ -25,7 +18,7 @@ public class TestDowncast {
 
 	public static void main(String[] args) {
 		Object o = (Object1) getObject();
-		System.out.println(o.toString());
+		System.out.println(o.getClass());
 	}
 
 }

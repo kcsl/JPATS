@@ -1,16 +1,10 @@
-package tests;
+package tests.type;
 
-import annotations.features.AliasPropagation;
-import annotations.questions.PrintedType;
-import annotations.sensitivities.FieldSensitivity;
 
 /**
  * This tests for type information propagation through field references
  */
-@AliasPropagation(rationale="Points-to information is propagated through static object fields")
-@FieldSensitivity(rationale="If the analysis is not field sensitive then it will likely report that Container2.o1 could contain both Objects \"o1\" and \"o2\".")
-@PrintedType
-public class TestFieldAliasPropagation_2 implements Test {
+public class TestFieldAliasPropagation_2 {
 
 	static class Container1 {
 		public static Object o1;

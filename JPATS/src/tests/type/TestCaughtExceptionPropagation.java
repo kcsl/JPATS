@@ -1,4 +1,4 @@
-package tests;
+package tests.type;
 /**
  * This tests type information propagated through exceptional flows
  * 
@@ -8,11 +8,6 @@ public class TestCaughtExceptionPropagation {
 
 	static class MyThrowable extends Throwable {
 		private static final long serialVersionUID = 1L;
-
-		@Override
-		public String toString(){
-			return "TestCaughtExceptionPropagation$MyThrowable$toString";
-		}
 	}
 	
 	public static void main(String[] args){
@@ -22,7 +17,7 @@ public class TestCaughtExceptionPropagation {
 			try {
 				throw t1;
 			} catch (Throwable t2) {
-				System.out.println(t2.toString());
+				System.out.println(t2.getClass());
 			}
 		}
 	}

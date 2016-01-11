@@ -1,18 +1,10 @@
-package tests;
+package tests.type;
 
-import annotations.features.AliasPropagation;
-import annotations.questions.PrintedType;
-import annotations.sensitivities.FieldSensitivity;
-import annotations.sensitivities.ObjectSensitivity;
 
 /**
  * This tests for type information propagation through field references
  */
-@AliasPropagation(rationale="Points-to information is propagated through object member fields")
-@FieldSensitivity(rationale="If the analysis is not field sensitive then it will likely report that Container2.o1 could contain both Objects \"o1\" and \"o2\".")
-@ObjectSensitivity(k=2, rationale="Container objects must be distiguished in order to distiguish the stored objects in the container.")
-@PrintedType
-public class TestFieldAliasPropagation_3 implements Test {
+public class TestFieldAliasPropagation_3 {
 
 	static class Container {
 		public Object o1;

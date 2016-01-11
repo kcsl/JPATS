@@ -1,4 +1,4 @@
-package tests;
+package tests.type;
 /**
  * This tests how an analysis deals with array indexes. A multi-dimensional
  * array with four total slots is assigned an object of a different type to each
@@ -10,41 +10,13 @@ package tests;
  */
 public class TestDoubleArrayIndexing {
 
-	static class Object1 {
-		public Object1() {}
+	static class Object1 {}
 
-		@Override
-		public String toString() {
-			return "TestDoubleArrayIndexing$Object1$toString";
-		}
-	}
+	static class Object2 {}
 
-	static class Object2 {
-		public Object2() {}
+	static class Object3 {}
 
-		@Override
-		public String toString() {
-			return "TestDoubleArrayIndexing$Object2$toString";
-		}
-	}
-
-	static class Object3 {
-		public Object3() {}
-
-		@Override
-		public String toString() {
-			return "TestDoubleArrayIndexing$Object3$toString";
-		}
-	}
-
-	static class Object4 {
-		public Object4() {}
-
-		@Override
-		public String toString() {
-			return "TestDoubleArrayIndexing$Object4$toString";
-		}
-	}
+	static class Object4 {}
 
 	public static void fill1(Object[][] a) {
 		a[0][0] = new Object1();
@@ -70,6 +42,6 @@ public class TestDoubleArrayIndexing {
 		fill3(a);
 		fill4(a);
 		Object object = a[0][0];
-		System.out.println(object.toString());
+		System.out.println(object.getClass());
 	}
 }

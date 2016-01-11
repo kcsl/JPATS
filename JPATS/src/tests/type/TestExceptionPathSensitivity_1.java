@@ -1,8 +1,4 @@
-package tests;
-
-import annotations.questions.PrintedType;
-import annotations.sensitivities.PathSensitivity;
-import annotations.sensitivities.paths.ExceptionSensitivity;
+package tests.type;
 
 /**
  * This tests if the analysis is path sensitive
@@ -12,10 +8,7 @@ import annotations.sensitivities.paths.ExceptionSensitivity;
  * both Object1 and Object2 are possible, when really only Object2 is possible
  * at runtime.
  */
-@PathSensitivity(k=1, rationale="Object \"o\" is conditionally overwritten with an instance of type Object2.  The finally block is always executed.")
-@ExceptionSensitivity(rationale="The path goes through a finally block.")
-@PrintedType
-public class TestExceptionPathSensitivity_3 implements Test {
+public class TestExceptionPathSensitivity_1 {
 
 	static class Object1 {}
 
@@ -27,9 +20,9 @@ public class TestExceptionPathSensitivity_3 implements Test {
 		try {
 			throw new Exception();
 		} catch (Exception e) {
-			
-		} finally {
 			o = new Object2();
+		} finally {
+			
 		}
 		
 		System.out.println(o.getClass());

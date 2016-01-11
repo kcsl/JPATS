@@ -1,14 +1,10 @@
-package tests;
+package tests.type;
 
-import annotations.questions.PrintedType;
-import annotations.sensitivities.FieldSensitivity;
 
 /**
  * This tests for type information propagation through field references
  */
-@FieldSensitivity(rationale="A field insensitive analysis would likely conservatively report Object1 or Object as the printed type.")
-@PrintedType
-public class TestFieldSensitivity_1 implements Test {
+public class TestFieldSensitivity_1 {
 
 	static Object o1;
 	static Object o2;

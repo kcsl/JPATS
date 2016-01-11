@@ -1,8 +1,5 @@
-package tests;
+package tests.type;
 
-import annotations.questions.PrintedType;
-import annotations.sensitivities.PathSensitivity;
-import annotations.sensitivities.paths.BranchSensitivity;
 
 /**
  * This tests if the analysis is path sensitive
@@ -12,10 +9,7 @@ import annotations.sensitivities.paths.BranchSensitivity;
  * both Object1 and Object2 are possible, when really only Object2 is possible
  * at runtime.
  */
-@PathSensitivity(k=2, rationale="Object \"o\" is conditionally overwritten with an instance of type Object2 in the second branch if \"z\" is true, which happens only the first branch is true.  In this program the conditional case (z==true) is always true.")
-@BranchSensitivity(rationale="The path depends on an if condition branch.")
-@PrintedType
-public class TestBranchPathLevel2Sensitivity implements Test {
+public class TestBranchPathLevel2Sensitivity {
 
 	static class Object1 {}
 

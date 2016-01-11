@@ -1,14 +1,10 @@
-package tests;
+package tests.type;
 
-import annotations.features.AliasPropagation;
-import annotations.questions.PrintedType;
 
 /**
  * This tests for type information propagation through field references
  */
-@AliasPropagation(rationale="Points-to information is propagated through fields \"o1\" and \"o2\".")
-@PrintedType
-public class TestFieldAliasPropagation_1 implements Test {
+public class TestFieldAliasPropagation_1 {
 
 	private static Object o1;
 	private static Object o2;

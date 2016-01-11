@@ -1,4 +1,4 @@
-package tests;
+package tests.type;
 /**
  * Tests an array that stores a reference to itself
  * Credit to Jon Mathews and Tom Deering for example
@@ -14,7 +14,7 @@ public class TestArraySelfReference {
 		Object[] unpacked = (Object[])array[0];
 		// note: unpacked == array 
 		
-		System.out.println(unpacked.toString());
+		System.out.println(unpacked.getClass());
 	}
 
 }
