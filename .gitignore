@@ -1,6 +1,8 @@
 .DS_Store
 Thumbs.db
 
+*.class
+
 # don't commit proprietary logicblox files
 logicblox-*/
 logicblox-*.tar.gz
