@@ -11,3 +11,6 @@ logicblox-*.tar.gz
 doop/
 doop-tools/
 doop-benchmarks/
+
+# don't commit results
+results/
