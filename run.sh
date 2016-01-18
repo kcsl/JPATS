@@ -1,8 +1,5 @@
 #!/bin/bash
 
-echo "Building tests cases..."
-./mkjars.sh
-
 echo "Analyzing test cases..."
 echo "Progress will be written to 'progress.txt', run 'tail -f progress.txt' to monitor progress."
 rm -f progress.txt
