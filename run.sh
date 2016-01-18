@@ -1,4 +1,4 @@
 #!/bin/bash
 
-rm progress.txt
+rm -f progress.txt
 ./tests.sh &> progress.txt&

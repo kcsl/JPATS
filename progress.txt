@@ -1,0 +1,28 @@
+rm: cannot remove ‘/media/overflow/bholland/JPATS/results’: No such file or directory
+Strategy: 1-call-site-sensitive
+Class: TestAnonymousInnerClass
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+Class: TestArrayAccess
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+Class: TestArrayAccessPropagation
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+Class: TestArrayAsCloneable
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.002s
+Class: TestArrayAsObject
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.002s
+Class: TestArrayAsSerializable
