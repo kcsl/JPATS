@@ -14,3 +14,4 @@ doop-benchmarks/
 
 # don't commit results
 results/
+progress.txt
