@@ -12,6 +12,7 @@ doop/
 doop-tools/
 doop-benchmarks/
 
-# don't commit results
+# don't commit tests or results
+testsuite/
 results/
 progress.txt
