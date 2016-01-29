@@ -22,7 +22,7 @@ while read strategy; do
 
                 cd ${dir}/doop/
                 rm -f last-analysis
-                ./doop -a $strategy -j $jar -Xstats:none &> ${dir}/results/$class/$strategy.doop.log
+                ./doop -a $strategy -j $jar -t 1440 -Xstats:none &> ${dir}/results/$class/$strategy.doop.log
                 time bloxbatch -db last-analysis -query '_(?type) <- MethodInvocation:Signature[?mInvocation]="<java.lang.Object: java.lang.Class getClass()>", VirtualMethodInvocation:Base[?mInvocation] = ?base, AssignReturnValue[?mInvocation] = ?to, ActualParam[0, ?newmInvocation] = ?to, MethodInvocation:Signature[?newmInvocation]="<java.io.PrintStream: void println(java.lang.Object)>", VarPointsTo(_, ?heap, _, ?base), HeapAllocation:Type[?heap]=?type.' &> ${dir}/results/$class/$strategy.result.txt
         done
-done < ${dir}/single-strategy.txt
+done < ${dir}/simple-strategies.txt
